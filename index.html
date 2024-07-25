@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); /* Hier Schriftart importieren */
+        
+        body {
+            font-family: Arial, sans-serif; /* Hier Schriftart ändern */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Hintergrundfarbe der Seite */
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #333;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        nav img {
+            margin-right: auto;
+            height: 40px; /* Beispielgröße, falls nötig */
+        }
+        main {
+            padding: 1em;
+            text-align: center;
+        }
+        .tables-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+        .table-wrapper {
+            width: 45%;
+            padding: 1em;
+            background-color: #f4f4f4; /* Hintergrundfarbe der Preisblöcke */
+            /* Rahmen entfernt */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: none; /* Rahmen entfernen */
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid black; /* Nur unteren Rahmen beibehalten */
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive; /* Hier Schriftart ändern */
+            font-style: italic; /* Hier Schriftstil ändern */
+            font-weight: bold; /* Hier Schriftstil ändern */
+            font-size: 3em; /* Hier Schriftgröße ändern */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 0.25em 1em; /* Padding reduziert, um den Footer kleiner zu machen */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between; /* Inhalt nach links und rechts aufteilen */
+            align-items: center;
+            box-sizing: border-box; /* Padding in die Gesamtgröße einbeziehen */
+        }
+        .contact-info {
+            margin: 0; /* Entfernt den Standard-Margin */
+        }
+        .social-icons {
+            display: flex;
+        }
+        .social-icons img {
+            width: 24px; /* Größe der Social Media Icons */
+            height: 24px;
+            margin-left: 10px; /* Abstand zwischen den Icons */
+        }
+
+        /* Media Queries für mobile Geräte */
+        @media (max-width: 768px) {
+            .tables-container {
+                flex-direction: column; /* Stellt die Tabellen untereinander dar */
+                align-items: center; /* Zentriert die Tabellen */
+            }
+            .table-wrapper {
+                width: 90%; /* Erhöht die Breite der Tabellenwrapper für kleinere Bildschirme */
+                margin-bottom: 1em; /* Fügt Abstand zwischen den Tabellen hinzu */
+            }
+            h1 {
+                font-size: 2em; /* Verkleinert die Überschrift auf kleineren Bildschirmen */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .table-wrapper {
+                width: 100%; /* Stellt sicher, dass die Tabellen den gesamten Bildschirmplatz nutzen */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Kommentar: Hier das Logo hinzufügen -->
+        <img src="logo.png" alt="Logo"> <!-- Pfad überprüfen -->
+        <a href="#">Startseite</a>
+        <a href="#">Über mich</a>
+    </nav>
+    <main>
+        <h1>Preisliste</h1>
+        <div class="tables-container">
+            <div class="table-wrapper">
+                <!-- Kommentar: Hier Preise "Für Sie" anpassen -->
+                <h2>Für Sie</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Leistung</th>
+                            <th>Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Haarschnitt</td>
+                            <td>35,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Farbservice</td>
+                            <td>60,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pflegebehandlung</td>
+                            <td>25,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Styling</td>
+                            <td>20,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Strähnchen</td>
+                            <td>35,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Kopfmassage</td>
+                            <td>10,00 €</td>
+                        </tr>
+						                <!-- Wenn du eine neue Spalte haben willst, dann kopiere und füge ein - vom <tr> xxx </tr> und passe die Dienstleistung und den Preis an -->
+                        <tr>
+                            <td>Nackenmassage</td>
+                            <td>10,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-wrapper">
+                <!-- Kommentar: Hier Preise "Für Ihn" anpassen -->
+                <h2>Für Ihn</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Leistung</th>
+                            <th>Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Haarschnitt</td>
+                            <td>25,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Rasur</td>
+                            <td>15,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Haarkur</td>
+                            <td>20,00 €</td>
+                        </tr>
+										<!-- Wenn du eine neue Spalte haben willst, dann kopiere und füge ein - vom <tr> xxx </tr> und passe die Dienstleistung und den Preis an -->
+                        <tr>
+                            <td>Styling</td>
+                            <td>18,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+											<!-- Wenn du deine Kontaktdaten anpassen willst, dann ändere die hier -->
+        <div class="contact-info">
+            <p>Arzu Keskin</p>
+            <p>Mobil: +49 176 XXXX XXXX</p>
+            <p>Adresse: Gildenstr. 7, 74074 Heilbronn</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="fb.jpg" alt="FB">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.jpg" alt="IG">
+            </a>
+            <a href="https://www.google.com" target="_blank">
+                <img src="mail.jpg" alt="Mail">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
